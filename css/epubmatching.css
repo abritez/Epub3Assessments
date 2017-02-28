@@ -1,0 +1,41 @@
+
+.match-problem {
+    position: relative;
+}
+
+.match-problem > .question{
+    display: flex;
+}
+
+.match-problem .radiogroup0 input{
+    flex-grow: 0;
+}
+
+.radiogroup {
+    margin: 15px;
+}
+
+.match-problem .radiogroup0 label{
+    display: flex;
+    text-align: right;
+    flex-direction: row-reverse;
+    margin-right: 5px;
+}
+
+label {
+    display: flex;
+    line-height: 1em;
+}
+
+
+
+input[type="radio"] {
+    height: 15px;
+    width: 15px;
+}
+
+.checkedConnector{
+    position:absolute;
+    top:0;
+    left:0;
+}

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:svg="http://www.w3.org/2000/svg" xmlns:epub="http://www.idpf.org/2007/ops" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/demo.css"/>
+    <link rel="stylesheet" href="css/epubmatching.css"/>
+</head>
+<body xml:lang="en-US" lang="en-US">
+       <section class="container">
+           <h1>EPub3 Accessible Assessment</h1>
+           <h2>Matching</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet architecto at autem distinctio dolore ea eius, enim explicabo incidunt ipsa, maxime nihil quibusdam quis quisquam quo tenetur ullam voluptatibus?</p>
+
+           <pre>
+&lt;div id="AssessmentId" class="match-problem" epub:type="match-problem" aria-describedby="instructionA"&gt;
+   &lt;p id="instructionA">Match the items on the left list with the items on the right list&lt;/p&gt;
+   &lt;div class="question" epub:type="question"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;The point that, if won, wins the match for a player&lt;/li&gt;
+            &lt;li&gt;The area between the net and the service line&lt;/li&gt;
+            &lt;li&gt;Hitting the ball before it bounces&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;ol&gt;
+            &lt;li&gt;ace&lt;/li&gt;
+            &lt;li&gt;backswing&lt;/li&gt;
+            &lt;li&gt;center service line&lt;/li&gt;
+        &lt;/ol&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol id="answersA" class="answer" epub:type="answer"&gt;
+   &lt;li>&lt;span&gt;ace&lt;/span&gt; The point that, if won, wins the match for a player&lt;/li&gt;
+   &lt;li>&lt;span&gt;center service line&lt;/span&gt; The area between the net and the service line&lt;/li&gt;
+   &lt;li>&lt;span&gt;backswing&lt;/span&gt; Hitting the ball before it bounces&lt;/li&gt;
+&lt;/ol&gt;
+           </pre>
+
+           <div id="matchAssessment1" class="match-problem" epub:type="match-problem" aria-describedby="instructionA">
+               <p id="instructionA">Match the items on the left list with the items on the right list</p>
+               <div class="question" epub:type="question">
+                   <ol>
+                       <li>The point that, if won, wins the match for a player</li>
+                       <li>The area between the net and the service line</li>
+                       <li>Hitting the ball before it bounces</li>
+                   </ol>
+                   <ol>
+                       <li>ace</li>
+                       <li>backswing</li>
+                       <li>center service line</li>
+                   </ol>
+               </div>
+           </div>
+
+           <ol id="answersA" class="answer" epub:type="answer">
+               <li><span>ace</span> The point that, if won, wins the match for a player</li>
+               <li><span>center service line</span> The area between the net and the service line</li>
+               <li><span>backswing</span> Hitting the ball before it bounces</li>
+           </ol>
+
+       </section>
+
+       <script
+               src="https://code.jquery.com/jquery-3.1.1.min.js"
+               integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+               crossorigin="anonymous"></script>
+       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+       <script type="text/javascript" src="jquery/jquery.epubmatching.js"></script>
+
+
+       <script type="text/javascript">
+           $(function() {
+               $("#matchAssessment1").epubmatching({
+                   groupLabels: ["definitions", "terms"],
+                   answerElement: $('#answersA'),
+                   showSelectedItems: true
+               })
+           });
+       </script>
+
+</body>
